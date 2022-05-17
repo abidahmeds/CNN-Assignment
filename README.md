@@ -1,48 +1,50 @@
-# Project Name
-> Outline a brief description of your project.
+# Melanoma Detection Assignment
+> To build a CNN based model which can accurately detect melanoma. Melanoma is a type of cancer that can be deadly if not detected early. It accounts for 75% of skin cancer deaths. A solution that can evaluate images and alert dermatologists about the presence of melanoma has the potential to reduce a lot of manual effort needed in diagnosis.
 
 
 ## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Conclusions](#conclusions)
-* [Acknowledgements](#acknowledgements)
-
-<!-- You can include any other section that is pertinent to your problem -->
-
-## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
-
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
-
-## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
-
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+* Problem Statement and Analysis approach
+* Overfitting and ways to solve it
+* Augmentation to solve class imbalance
+* Final results
+* Referenecs
 
 
-## Technologies Used
-- library - version 1.0
-- library - version 2.0
-- library - version 3.0
+## Problem Statement and Analysis Approach
+> To Analyze the Lending club data set with all the information on loan given last few years and understand how some variable impacts or not towards loan success to have a loan decision made for new loans . It is important to understand the parameters which should be considered in taking loan approval decision and if some actions can be taken to secure loan customer.
+### Analysis approach
+- Understand credit funding parameters and factors affecting same through public knowledge and apply same on data set.
+- Use EDA principles to analyse the data set 
+- Clean , remove, rename and derive parameters ( columns )
+- Use Data visualization methods to understand univariate and Bi variate patterns 
+- Describe inferences for parameters impacting credit funding decision.
 
-<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
 
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
+## Overfitting and ways to solve it
+- 5 C of Credit – Character , Capacity, Collateral , Capital , Conditions 
+- Credit score factors : Payment history-35% , Amounts owned -30%  , Credit history length (15%) , Credit mix(10%), New credits opened (10%).
 
+## Augmentation to solve class imbalance
+
+> The following factors were considered for Analysis and also some derivative metrices were used to arrive at the analysis.
+![Lending Decision Factors](https://github.com/abidahmeds/LendingClubCaseStudy/blob/master/charts/factors1.png)
+![Lending Decision Factors2](https://github.com/abidahmeds/LendingClubCaseStudy/blob/master/charts/factors2.png)
+
+### Business Driven Derived Metrices and other varaibles.
+> For the purpose of Credit risk analysis , Credit Score or FICO score is to be calculated and also some other varaibles were derived out of given data columns.
+- Since there is no Credit score given in Dataset , it would probably be a biz driven derived metric. 
+> This is how Credit Score was calculated  there could be more parameters used but this is 1st version based on information gathered.
+![Credit Score Calculation formula](https://github.com/abidahmeds/LendingClubCaseStudy/blob/master/charts/CreditScoreCalculationFormula.png)
+
+## Final results
+- Credit Score and Credit utilization Ration have an important role and decision making factor to grant loans
+
+## References
+-  https://www.myfico.com/credit-education/whats-in-your-credit-score
+-  https://www.cnbc.com/select/this-is-the-most-important-factor-that-determines-your-credit-score/ 
 
 ## Contact
-Created by [@githubusername] - feel free to contact me!
+Created by [@abidahmeds] - feel free to contact me!
 
 
 <!-- Optional -->
