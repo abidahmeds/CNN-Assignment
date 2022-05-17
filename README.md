@@ -7,7 +7,6 @@
 * Overfitting and ways to solve it
 * Augmentation to solve class imbalance
 * Final results
-* Referenecs
 
 
 ## Problem Statement and Analysis Approach
@@ -37,27 +36,19 @@ Chose an appropriate data augmentation strategy to resolve underfitting/overfitt
 
 
 ## Overfitting and ways to solve it
-- 5 C of Credit – Character , Capacity, Collateral , Capital , Conditions 
-- Credit score factors : Payment history-35% , Amounts owned -30%  , Credit history length (15%) , Credit mix(10%), New credits opened (10%).
+- Clearly the model is overfitting as, we see training loss and accuracy has being increasing with epocs of trainings , reaching a accuracy of around 88% but validation accuracy is up and down and never crosses 38% . This means model does not perform well on unseen validation data and we need to handle same. 
+- see this link - https://towardsdatascience.com/simple-image-data-augmentation-technics-to-mitigate-overfitting-in-computer-vision-2a6966f51af4
+- Data augmentation methods are one of the ways to mitigate Overfitting.
+- Tried rotation , flip , contrast change, zoom etc, but still validation accuracy is poor and also it brings down training accuracy.
 
 ## Augmentation to solve class imbalance
 
-> The following factors were considered for Analysis and also some derivative metrices were used to arrive at the analysis.
-![Lending Decision Factors](https://github.com/abidahmeds/LendingClubCaseStudy/blob/master/charts/factors1.png)
-![Lending Decision Factors2](https://github.com/abidahmeds/LendingClubCaseStudy/blob/master/charts/factors2.png)
+> Rectify class imbalances present in the training dataset with Augmentor library- https://augmentor.readthedocs.io/en/master/
 
-### Business Driven Derived Metrices and other varaibles.
-> For the purpose of Credit risk analysis , Credit Score or FICO score is to be calculated and also some other varaibles were derived out of given data columns.
-- Since there is no Credit score given in Dataset , it would probably be a biz driven derived metric. 
-> This is how Credit Score was calculated  there could be more parameters used but this is 1st version based on information gathered.
-![Credit Score Calculation formula](https://github.com/abidahmeds/LendingClubCaseStudy/blob/master/charts/CreditScoreCalculationFormula.png)
 
 ## Final results
-- Credit Score and Credit utilization Ration have an important role and decision making factor to grant loans
+- After class imbalance handling through Augmentor , which augments few more samples each class , and creates a revised data set with equal nunmber of images for each class. for eg. 500 entries per class. after this when we train using CNN , we get better training auccracy - around 97% training accuracy and 80% validation accuracy. 
 
-## References
--  https://www.myfico.com/credit-education/whats-in-your-credit-score
--  https://www.cnbc.com/select/this-is-the-most-important-factor-that-determines-your-credit-score/ 
 
 ## Contact
 Created by [@abidahmeds] - feel free to contact me!
